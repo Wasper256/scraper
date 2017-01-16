@@ -49,7 +49,7 @@ def loader(url):
 
 def collector(soup, url):
     # collecting MPN from URL
-    mpn = url.replace(".html", '').replace("http://item.jd.com/", '')
+    mpn = url.replace(".html", '').replace("https://item.jd.com/", '')
     g_data = soup.find_all("div", {"class": "itemInfo-wrap"})
     if not g_data:
         g_data = soup.find_all("div", {"id": "itemInfo"})
